@@ -12,7 +12,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-sass": "^2.2.0",
     "gulp-uglify": "^1.5.2",
-    "normalize.css": "^3.0.3",
+    "normalize-scss": "^4.0.3",
     "swig": "^1.4.2"
   },
   "devDependencies": {},

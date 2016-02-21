@@ -1,2 +1,7 @@
+@import 'normalize';
+
+@include normalize();
+
 body {
+	background:#888;
 }

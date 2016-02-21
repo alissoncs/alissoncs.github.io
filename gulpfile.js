@@ -20,19 +20,19 @@ gulp.task('sass', function(){
 
 	gulp.src(['./src/sass/main.scss'])
 	.pipe(
-		// sass
 		sass({
 			style: 'compressed',
+			errLogToConsole: true,
 			lineNumbers: false,
 			sourcemap: false,
-			includePaths: []
+			includePaths: [
+				'node_modules/support-for/sass/',
+				'node_modules/normalize-scss/sass/'
+			]
 		})
-		//error handler
 		.on('error', sass.logError)
 	)
-	// concat
 	.pipe(concat('style.min.css'))
-	// dest
 	.pipe(gulp.dest('./dest/css/'));
 
 });
