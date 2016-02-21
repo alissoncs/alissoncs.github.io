@@ -11,7 +11,7 @@ gulp.task('js', function(){
 
 	gulp.src(['./src/js/**/*.js'])
 	.pipe(uglify())
-	.pipe(concat('app.min.js'))
+	.pipe(concat('javascript.min.js'))
 	.pipe(gulp.dest('./dest/js/'));
 
 });
