@@ -12,7 +12,7 @@ swig.setDefaults({ cache: !dev });
 
 app.use('/static', express.static(__dirname + 'dest'));
 
-app.get('/', function(req, res){
+app.use('/', function(req, res){
 	res.render('index')
 });
 
