@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "express": "^4.13.4",
-    "normalize.css": "^3.0.3"
+    "normalize.css": "^3.0.3",
+    "swig": "^1.4.2"
   },
   "devDependencies": {},
   "author": "",
