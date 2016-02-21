@@ -1,11 +1,19 @@
 var express = require('express');
+var dev = true;
 var swig = require('swig');
 var app = express();
 
+// configure swig engine
+app.engine('html', swig.renderFile);
+app.set('view engine', 'html');
+app.set('views', __dirname + '/templates');
+app.set('view cache', !dev);
+swig.setDefaults({ cache: !dev });
+
 app.use('/static', express.static(__dirname + 'dest'));
 
-app.get('/', function(request, response){
-	response.send("olá mundo em node 2");
+app.get('/', function(req, res){
+	res.render('index')
 });
 
 app.listen(8000);
