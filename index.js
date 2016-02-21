@@ -1,5 +1,5 @@
 var express = require('express');
-var dev = (process.env.NODE_ENV != 'dev' || true);
+var dev = (process.env.NODE_ENV == 'dev' || true);
 var swig = require('swig');
 var app = express();
 
