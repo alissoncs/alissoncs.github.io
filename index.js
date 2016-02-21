@@ -2,6 +2,7 @@ var express = require('express');
 var dev = (process.env.NODE_ENV == 'dev' || true);
 var swig = require('swig');
 var app = express();
+var config = require('./app/config.js');
 
 // configure swig engine
 app.engine('html', swig.renderFile);
@@ -13,6 +14,8 @@ swig.setDefaults({ cache: !dev });
 app.use('/static', express.static('dest'));
 app.use('/static/css', express.static('dest/css'));
 app.use('/static/js', express.static('dest/js'));
+
+console.log('config', config.json());
 
 // middleware
 app.use(function(req, res, next){
