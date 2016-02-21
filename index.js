@@ -1,5 +1,5 @@
 var express = require('express');
-var dev = true;
+var dev = (process.env.NODE_ENV != 'dev' || true);
 var swig = require('swig');
 var app = express();
 
@@ -13,7 +13,7 @@ swig.setDefaults({ cache: !dev });
 app.use('/static', express.static(__dirname + 'dest'));
 
 app.use('/', function(req, res){
-	res.render('index')
+	res.render('index');
 });
 
 app.listen(8000);
