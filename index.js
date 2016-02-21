@@ -12,8 +12,31 @@ swig.setDefaults({ cache: !dev });
 
 app.use('/static', express.static(__dirname + 'dest'));
 
-app.use('/', function(req, res){
+// middleware
+app.use(function(req, res, next){
+	console.log('A simples request was made using '+req.method+ ' method');
+	res.type('.html');
+	next();
+});
+
+// index
+app.get('/', function(req, res){
 	res.render('index');
+});
+
+app.post('/contact', function(req, res){
+	res.type('json');
+	res.sendStatus(200);
+});
+
+// The 404 Route
+app.use('*', function(req, res){
+	res.render('404');
+});
+
+app.use(function(err, req, res, next) {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
 });
 
 app.listen(8000);
