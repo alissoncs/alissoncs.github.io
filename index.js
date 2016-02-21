@@ -6,7 +6,7 @@ var app = express();
 // configure swig engine
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
-app.set('views', __dirname + '/src/templates');
+app.set('views', __dirname + '/app/templates');
 app.set('view cache', !dev);
 swig.setDefaults({ cache: !dev });
 
