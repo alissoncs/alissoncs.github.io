@@ -10,7 +10,9 @@ app.set('views', __dirname + '/app/templates');
 app.set('view cache', !dev);
 swig.setDefaults({ cache: !dev });
 
-app.use('/static', express.static(__dirname + 'dest'));
+app.use('/static', express.static('dest'));
+app.use('/static/css', express.static('dest/css'));
+app.use('/static/js', express.static('dest/js'));
 
 // middleware
 app.use(function(req, res, next){
