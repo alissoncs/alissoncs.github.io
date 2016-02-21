@@ -1,7 +1,25 @@
 @import 'normalize';
+@import 'bourbon';
 
 @include normalize();
 
 body {
-	background:#888;
+	margin: 0;
+}
+
+.wrap {
+	width: 980px;
+	@include margin(null auto)
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: '';
+}
+
+@for $i from 1 to 6 {
+  h#{$i} {
+  	font-family: 'Droid Serif', serif;
+  	font-style:italic;
+  }
 }

@@ -26,6 +26,7 @@ gulp.task('sass', function(){
 			lineNumbers: false,
 			sourcemap: false,
 			includePaths: [
+				'node_modules/bourbon/app/assets/stylesheets/',
 				'node_modules/support-for/sass/',
 				'node_modules/normalize-scss/sass/'
 			]
