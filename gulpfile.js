@@ -3,6 +3,8 @@ var gulp = require('gulp');
 var gulp = require('gulp'),
 		uglify = require('gulp-uglify'),
 		concat = require('gulp-concat'),
+		imgmin = require('gulp-imagemin'),
+		pngquant = require('imagemin-pngquant'), // npm i -D imagemin-pngquant
 		sass = require('gulp-sass');
 
 
@@ -38,9 +40,26 @@ gulp.task('sass', function(){
 
 });
 
+gulp.task('img', function(){
+
+	return gulp.src('./src/img/*')
+			.pipe(imgmin({
+				progressive: true,
+				svgoPlugins: [
+     {removeViewBox: false},
+     {cleanupIDs: false}
+	   ],
+	   use: [pngquant()]
+			}))
+			.pipe(gulp.dest('./dest/img'));
+
+});
+
+
 gulp.task('watch', function(){
 	gulp.watch('./src/js/**/*.js', ['js']);
 	gulp.watch('./src/sass/**/*.scss', ['sass']);
+	gulp.watch('./src/img/*', ['img']);
 });
 
-gulp.task('default', ['js', 'sass']);
+gulp.task('default', ['js', 'sass', 'img']);

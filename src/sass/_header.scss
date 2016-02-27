@@ -1,0 +1,27 @@
+.main-header {
+	@include background-image(url($img + 'bgheader.jpg') center repeat);
+	min-height: 50px;
+	color:$white;
+	display:block;
+
+	
+	.logo {
+		color:inherit;
+		font-family: $roboto-condensed;
+		text-transform: uppercase;
+	}
+
+	.main-nav {
+		text-transform: uppercase;
+		font-size: .8em;
+		color: $white;
+
+		a {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+	}
+
+}
