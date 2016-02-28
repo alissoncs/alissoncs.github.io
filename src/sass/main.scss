@@ -70,6 +70,7 @@ figure {
 }
 
 hr {
+	border: 0;
 	border-bottom: 1px solid #eeeeee;
 	height:auto;
 	float: none;
@@ -109,6 +110,50 @@ hr {
 		width: rem(100);
 		margin-right: rem(26);
 	}
+	
+	&.full {
+		text-align: center;
+		span {
+			display: inline-block;
+			vertical-align: middle;
+			background: $white;
+			position:relative;
+			z-index: 1;
+			@include padding(null rem(30));
+		}
+		hr {
+			border-bottom: 1px solid lighten($dfcolor, 20);
+			@include margin(rem(-13));
+		}
+		&:before {
+			display: none;
+		}
+	}
+
+}
+
+.btn, button, input[type=button] {
+	cursor: pointer;
+	background: $dfblue;
+	color:$white;
+	font-size: em(18);
+	border: 0;
+	border-radius: 0;
+	@include padding(rem(12) rem(40));
+
+	&:hover {
+		background: darken($dfblue, 8);
+	}
+	&:active {
+		background: darken($dfblue, 12);
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		outline: 0 none;
+	}
+
 }
 
 @include selection {

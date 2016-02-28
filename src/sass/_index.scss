@@ -100,4 +100,32 @@
 
 }
 
+&.some-projects {
+
+	> .row {
+
+	}
+
+	@include margin(null null rem(20) null);
+	
+	.columns {
+		text-align: center;
+		height: rem(140);
+		line-height: rem(140);
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+}
+
+&.more-details {
+	@include padding(rem(20) $main-padding);
+	@include margin(null (-$main-padding));
+	@include linear-gradient(lighten(#000, 95), lighten(#000, 100));
+}
+
 } // end
