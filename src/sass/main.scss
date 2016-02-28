@@ -132,6 +132,21 @@ hr {
 
 }
 
+.show-large,
+.show-medium,
+.show-small {
+	display: none;
+}
+	@media #{$small-up} {
+		.show-small {display: block;}
+	}
+	@media #{$medium-up} {
+		.show-medium {display: block;}
+	}
+	@media #{$large-up} {
+		.show-large {display: block;}
+	}
+
 .btn, button, input[type=button] {
 	cursor: pointer;
 	background: $dfblue;
