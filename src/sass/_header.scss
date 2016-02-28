@@ -16,6 +16,7 @@
 		text-transform: uppercase;
 		font-weight: 100;
 		font-size: em(30);
+		line-height: em(20);
 		letter-spacing: -0.045em;
 		border-bottom: 5px solid $dfblue;
 		@include user-select(none);
@@ -89,7 +90,7 @@
 				@include transition(all $transition-time ease-in-out);
 				color: $dfred;
 				text-decoration: none;
-				
+
 			}
 		
 			&.active {
