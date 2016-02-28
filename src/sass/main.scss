@@ -1,5 +1,6 @@
 @import 'normalize';
 @import 'bourbon';
+@import 'grid.scss';
 
 
 @include normalize();
@@ -8,19 +9,24 @@
 @import 'variables';
 
 
+
 html, body {
 	margin: 0;
 	font-family: $roboto;
 	background: $white;
+	font-size: 14px;
+	cursor: default;
+	color: $dfcolor;
 	* {
-		font-family: $roboto;
+		font-family: inherit;
 	}
 }
 
 a {
-	color: inherit;
-		text-decoration: none;
-		cursor:pointer;
+	color: $dfblue;
+	text-decoration: none;
+	cursor:pointer;
+	@include transition(all $transition-time ease-in-out);
 	&:link {
 		color: inherit;
 		text-decoration: none;
@@ -28,7 +34,10 @@ a {
 	}
 	&:hover,
 	&:active {
-		text-decoration: underline;
+		color: darken($dfblue, 20);
+		@include transition(all $transition-time ease-in-out);
+		cursor:pointer;
+		text-decoration: none;
 	}
 }
 
@@ -40,6 +49,25 @@ nav {
 	}
 }
 
+p {
+	@include margin(0 0 rem(10) 0);
+	&:last-child {
+		@include margin(0);
+	}
+}
+
+figure {
+	@include margin(0);
+	border: 0;
+	text-align: center;
+	img {
+		max-width: 100%;
+		height: auto;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
 hr {
 	border-bottom: 1px solid #eeeeee;
 	height:auto;
@@ -48,15 +76,44 @@ hr {
 	background:none;
 }
 
-.wrap {
-	width: 800px;
-	@include margin(null auto)
+.main-content {
+	> .row {
+		background: $white;
+		box-shadow: 0 0 40px rgba(0,0,0,.1);
+		margin-top: -($main-retreat);
+		@include padding(null $main-padding);
+	}
 }
 
 @for $i from 1 to 6 {
   h#{$i} {
   	font-family: $roboto;
+  	@include margin(0 0 rem(10));
   }
 }
 
+.h-small {
+	@include user-select(none);
+	font-size: em(15);
+	text-transform: uppercase;
+	font-family: $roboto-condensed;
+	color:lighten($dfcolor, 20);
+	margin: rem(28) 0;
+
+	&:before {
+		content:"  ";
+		border-bottom: 1px solid lighten($dfcolor, 20);
+		display: inline-block;
+		vertical-align: middle;
+		width: rem(100);
+		margin-right: rem(26);
+	}
+}
+
+@include selection {
+  background-color: darken($dfblue, 10);
+  color: $white;
+}
+
 @import 'header';
+@import 'index';

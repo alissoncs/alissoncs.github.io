@@ -4,24 +4,104 @@
 	color:$white;
 	display:block;
 
+	$padding: 32px;
+
+	> .row {
+		@include padding($padding null null null);
+	}
 	
 	.logo {
 		color:inherit;
 		font-family: $roboto-condensed;
 		text-transform: uppercase;
+		font-weight: 100;
+		font-size: em(30);
+		letter-spacing: -0.045em;
+		border-bottom: 5px solid $dfblue;
+		@include user-select(none);
+		@include margin(null null $main-retreat null);
+		@include padding(null null $padding null);
+
+		img {
+			display: block;
+			float: left;
+			margin-right: rem(24);
+		}
+		strong {
+			font-weight: 500;
+			display: block;
+		}
+	}
+
+	.logo-desc {
+		font-family: $roboto-condensed;
+		float: left;
+		font-size: em(18);
+		@include user-select(none);
+		@include padding($padding/2+6 null null null);
+		small {
+			font-size: inherit;
+			font-weight: 100;
+			text-transform: lowercase;
+		}
 	}
 
 	.main-nav {
 		text-transform: uppercase;
-		font-size: .8em;
+		float: left;
+		font-size: em(16);
 		color: $white;
 
-		a {
-			&:hover {
-				text-decoration: none;
+		ul {
+			list-style-type: none;
+			padding: 0;
+			@include clearfix;
+			
+			>li {
+				float:left;
+				vertical-align: top;
 			}
+
+		}	
+
+		a {
+	
+			color: $white;
+			padding: 0 rem(20);
+			display: block;
+			line-height: $padding*2;
+			height: $padding*2;
+			border-bottom: 4px solid transparent;
+
+			@include user-select(none);
+
+			&:hover {
+				color: $dfred;
+				text-decoration: none;
+				border-bottom-color: $dfred;
+			}
+
+			&:hover,
+			&:active,
+			&:focus {
+
+				@include user-select(none);
+				@include transition(all $transition-time ease-in-out);
+				color: $dfred;
+				text-decoration: none;
+				
+			}
+		
+			&.active {
+				text-decoration: underline;
+			}
+
 		}
 
+	}
+
+	.language-select {
+		float:left;
 	}
 
 }

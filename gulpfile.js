@@ -30,7 +30,8 @@ gulp.task('sass', function(){
 			includePaths: [
 				'node_modules/bourbon/app/assets/stylesheets/',
 				'node_modules/support-for/sass/',
-				'node_modules/normalize-scss/sass/'
+				'node_modules/normalize-scss/sass/',
+				'node_modules/foundation-grid/'
 			]
 		})
 		.on('error', sass.logError)

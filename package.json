@@ -10,6 +10,7 @@
   "dependencies": {
     "bourbon": "^4.2.6",
     "express": "^4.13.4",
+    "foundation-grid": "^0.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-imagemin": "^2.4.0",
     "gulp-sass": "^2.2.0",

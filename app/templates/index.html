@@ -1,40 +1,55 @@
 {% extends 'skin.html' %}
 
-{% block content %}
+{% block content %}	
+	<div class="row">
 
-<main>
+		<section class="section about">
 	
-	<div class="wrap">
+			<h4 class="h-small">About me</h4>
 
-		<section class="section info">
-			<h3>What I do</h3>
-			<p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. </p>
-			<p>Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
+			<div class="row">
+				<p class="columns large-9">Lorem Ipsum é simplesmente uma <strong>simulação</strong> de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor <i>desconhecido</i>.</p>
+					<figure class="columns large-3">
+						<img src="/static/img/selfie.png" alt="">
+						<figcaption></figcaption>
+					</figure>
+			</div>
+
 		</section>
 
 		<section class="section skills">
-			<h3>My skills</h3>
-			<ul>
-					<li>
-						Front-end Development
-					</li>
-					<li>
-						Mobile Development
-					</li>
-					<li>
-						Server-side Development
-					</li>
-					<li>
-						Open-source enthusiastic
-					</li>
-					<li>
-						Agile Development
-					</li>
-			</ul>
 
-			<p>
-				<a href="/about">Know more about my skills</a>
-			</p>
+			<h4 class="h-small">Skills</h4>
+	
+
+			<div class="row">
+				
+				<div class="component columns large-4">
+					<i class="icon ion-code"></i>
+					<h3>Programming</h3>
+					<p class="description">
+						DescarteMap is an open-source project developed all by me. It's an app for Android indicates places to discard garbages in the correct place, easiely located by Google Maps
+					</p>
+				</div>
+
+
+				<div class="component columns large-4">
+					<i class="icon ion-pound"></i>
+					<h3>Front-end development</h3>
+					<p class="description">
+						DescarteMap is an open-source project developed all by me. It's an app for Android indicates places to discard garbages in the correct place, easiely located by Google Maps
+					</p>
+				</div>
+
+				<div class="component columns large-4">
+					<i class="icon ion-social-buffer"></i>
+					<h3>UI/UX Design</h3>
+					<p class="description">
+						DescarteMap is an open-source project developed all by me. It's an app for Android indicates places to discard garbages in the correct place, easiely located by Google Maps
+					</p>
+				</div>
+
+			</div>
 
 		</section>
 
@@ -82,7 +97,5 @@
 		</section>
 
 	</div>
-
-</main>
 
 {% endblock %}

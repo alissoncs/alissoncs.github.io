@@ -8,6 +8,8 @@
 		
 		<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
 
+		<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
   <link rel="stylesheet" href="/static/css/style.min.css">
 
 </head>
@@ -15,20 +17,21 @@
 	
 	<header id="main-header" class="main-header">
 		
-		<div class="wrap">
+		<div class="row">
 			
-			<div class="logo">
+			<div class="logo columns medium-3">
 				<img src="/static/img/logoicon.png" alt="">
-				<strong>
-					Alisson Silva
-				</strong>
+				<strong>Alisson</strong> Silva
+				
 			</div>
 
-			<div class="logo-subscribe">
+			<div class="logo-desc columns medium-2">
+				<small>
 				Software Developer
+				</small>
 			</div>
 
-			<div class="main-nav">
+			<div class="main-nav columns medium-6">
 				<nav>
 					<ul>
 						<li>
@@ -48,6 +51,8 @@
 
 	</header>
 
+	<main class="main-content">
   {% block content %}{% endblock %}
+ </main>
 
 <script src="/static/js/javascript.min.js"></script>

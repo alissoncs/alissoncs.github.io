@@ -1,0 +1,65 @@
+.section {
+
+&.about {
+
+	p {
+		font-size: em(21);
+		text-align: right;
+		color: lighten($dfcolor, 10);
+		@include margin(rem(28) null);
+		strong, b {
+			color:$dfblue;
+		}
+		i, em {
+			font-style: normal;
+			font-weight: bold;
+		}
+	}
+
+}
+
+&.skills {
+	.row {
+		@include margin(0);
+	}
+
+	@include margin(null (-($main-padding)) rem(40) (-($main-padding)));
+	
+	$background-flip: lighten(#000, 90);
+	.component {
+		text-align: center;
+		background: lighten($background-flip, 5);
+		@include padding(rem(25) rem(40));
+		
+		&:first-child {
+			background: $background-flip;
+		}
+
+		&:last-child {
+			background: lighten($background-flip, 8);
+		}
+
+		.icon {
+				color:$dfred;
+				font-size: rem(58);
+		}
+
+		.title, h3 {
+			color: $dfred;
+			font-weight: normal;
+			font-size: em(24);
+			line-height: 1;
+			@include margin(0 null rem(20) null);
+		}
+		
+		p {
+			font-size: em(14);
+			color:darken($dfcolor, 40);
+			line-height: em(20);
+		}
+
+	}
+
+}
+
+}
