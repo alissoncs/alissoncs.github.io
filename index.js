@@ -2,6 +2,7 @@ var express = require('express');
 var dev = (process.env.NODE_ENV == 'dev' || true);
 var swig = require('swig');
 var app = express();
+// var i18n = require('i18n');
 var config = require('./app/config.js');
 
 // configure swig engine
@@ -16,6 +17,13 @@ app.use('/static/css', express.static('dest/css'));
 app.use('/static/js', express.static('dest/js'));
 
 console.log('config', config.json());
+
+// i18n
+// i18n.configure({
+// 	locales: ['pt', 'en'],
+// 	directory: __dirname + '/app/lang/'
+// });
+// console.log(i18n.__('Hello'));
 
 // middleware
 app.use(function(req, res, next){
@@ -40,10 +48,7 @@ app.use('*', function(req, res){
 });
 
 app.use(function(err, req, res, next) {
-  console.error(err.stack);
   res.status(500).send('Something broke!');
 });
-
-app.listen(8000);
-
-console.log('Server running at http://127.0.0.1:8000');
+app.set('port', process.env.PORT || 3000);
+app.listen(app.get('port'));
