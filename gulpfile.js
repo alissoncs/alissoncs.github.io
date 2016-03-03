@@ -29,8 +29,7 @@ gulp.task('sass', function(){
 			sourcemap: false,
 			includePaths: [
 				'node_modules/bourbon/app/assets/stylesheets/',
-				'node_modules/support-for/sass/',
-				'node_modules/normalize-scss/sass/',
+				'node_modules/normalize.scss/',
 				'node_modules/foundation-grid/'
 			]
 		})
@@ -63,4 +62,4 @@ gulp.task('watch', function(){
 	gulp.watch('./src/img/*', ['img']);
 });
 
-gulp.task('default', ['js', 'sass', 'img']);
+gulp.task('default', ['js', 'sass']);

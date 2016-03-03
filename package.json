@@ -15,7 +15,7 @@
     "gulp-imagemin": "^2.4.0",
     "gulp-sass": "^2.2.0",
     "gulp-uglify": "^1.5.2",
-    "normalize-scss": "^4.0.3",
+    "normalize.scss": "^0.1.0",
     "swig": "^1.4.2"
   },
   "devDependencies": {
