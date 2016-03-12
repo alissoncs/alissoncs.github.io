@@ -50,11 +50,10 @@
 
 	.main-nav {
 		text-transform: uppercase;
-		float: left;
 		font-size: em(16);
 		color: $white;
 
-		ul {
+		>ul {
 			list-style-type: none;
 			padding: 0;
 			@include clearfix;
@@ -62,43 +61,42 @@
 			>li {
 				float:left;
 				vertical-align: top;
-			}
-
-		}	
-
-		a {
-	
-			color: $white;
-			padding: 0 rem(20);
-			display: block;
-			line-height: $padding*2;
-			height: $padding*2;
-			border-bottom: 4px solid transparent;
-
-			@include user-select(none);
-
-			&:hover {
-				color: $dfred;
-				text-decoration: none;
-				border-bottom-color: $dfred;
-			}
-
-			&:hover,
-			&:active,
-			&:focus {
+			> a {
+		
+				color: $white;
+				padding: 0 rem(20);
+				display: block;
+				line-height: $padding*2;
+				height: $padding*2;
+				border-bottom: 4px solid transparent;
 
 				@include user-select(none);
-				@include transition(all $transition-time ease-in-out);
-				color: $dfred;
-				text-decoration: none;
 
-			}
-		
-			&.active {
-				text-decoration: underline;
-			}
+				&:hover {
+					color: $dfred;
+					text-decoration: none;
+					border-bottom-color: $dfred;
+				}
 
-		}
+				&:hover,
+				&:active,
+				&:focus {
+
+					@include user-select(none);
+					@include transition(all $transition-time ease-in-out);
+					color: $dfred;
+					text-decoration: none;
+
+				}
+			
+				&.active {
+					text-decoration: underline;
+				}
+
+			}// a
+
+			} // li
+		}// ul
 
 	}
 
