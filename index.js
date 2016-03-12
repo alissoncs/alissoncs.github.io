@@ -51,4 +51,5 @@ app.use(function(err, req, res, next) {
   res.status(500).send('Something broke!');
 });
 app.set('port', process.env.PORT || 3000);
+console.log('Started at ' + app.get('port'));
 app.listen(app.get('port'));
