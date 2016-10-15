@@ -1,19 +1,25 @@
 .info {
+  padding: 28px;
 
-  padding: 48px;
-  font-size: 14px;
+  @media(min-width: $screen-sm-min) {
+    padding: 48px;
+  }
+
   line-height: 1.5em;
 
   h4 {
     font-weight: 400;
     text-transform: uppercase;
     font-size: 19px;
-    margin: 12px 4px 0 4px;
     display: block;
     position: relative;
+    @media(min-width: $screen-sm-min) {
+      margin: 12px 4px 0 4px;
+    }
   }
 
   p {
+    text-align: left;
     &:last-child {
       margin-bottom: 0;
     }

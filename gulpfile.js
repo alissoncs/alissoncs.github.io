@@ -6,7 +6,8 @@ gulp.task('sass', function() {
     return gulp.src('./site/_sass/main.scss')
     .pipe(sass({
         includePaths: [
-          './node_modules/normalize-sass'
+          './node_modules/normalize-sass',
+          './node_modules/bootstrap-sass/assets/stylesheets',
         ]
     }).on('error', sass.logError))
     .pipe(gulp.dest('./site/css'))

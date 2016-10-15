@@ -1,12 +1,22 @@
 @import 'normalize';
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/grid";
+@import "bootstrap/scaffolding";
+
 
 body {
   font-family: 'Source Sans Pro', Arial, sans-serif;
-  font-size: 14px;
+  font-size: 17px;
   display: block;
   background: #FFFFFF;
   color: #666666;
   cursor: default;
+
+  @media(min-width: $screen-sm-min) {
+    font-size: 14px;
+  }
+
 }
 
 p {
@@ -45,8 +55,17 @@ hgroup {
 }
 
 .logo {
+
+  text-align: center;
+  @media(min-width: $screen-sm-min) {
+    text-align: left;
+  }
+
   figure {
-    float: left;
+    @media(min-width: $screen-sm-min) {
+      float: left;
+    }
+    text-align: center;
     margin: 0;
     padding: 0;
     position: relative;
@@ -63,7 +82,7 @@ hgroup {
     }
   }
   img {
-    display: block;
+    display: inline-block;
     width: 80px;
     height: 80px;
     border-radius: 100%;
@@ -112,6 +131,4 @@ hr {
     }
   }
 }
-
-@import 'grid';
 @import 'info';
