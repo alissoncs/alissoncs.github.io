@@ -10,9 +10,15 @@ app.use('/js', express.static(__dirname + '/site/js'))
 app.use('/img', express.static(__dirname + '/site/img'))
 app.use('/', express.static(__dirname + '/site/root'))
 
-app.get('*', (req,res,next) => {
+app.get('/', (req,res,next) => {
 
   res.render('index.pug')
+
+})
+
+app.get('*', (req,res,next) => {
+
+  res.redirect('/')
 
 })
 
