@@ -1,7 +1,8 @@
 .info {
 
   padding: 48px;
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 1.5em;
 
   h4 {
     font-weight: 400;
@@ -13,7 +14,9 @@
   }
 
   p {
-    margin: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .about {}
