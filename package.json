@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,10 @@
   },
   "homepage": "https://github.com/alissoncs/alissoncs#readme",
   "dependencies": {
-    "http-server": "^0.9.0"
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "normalize-sass": "^1.0.0",
+    "pug": "^2.0.0-beta6"
   }
 }
