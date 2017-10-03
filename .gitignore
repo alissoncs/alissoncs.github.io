@@ -1,8 +1,5 @@
 
 # Created by https://www.gitignore.io/api/node
-dest
-dest/
-/dest
 ### Node ###
 # Logs
 logs

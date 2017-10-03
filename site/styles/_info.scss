@@ -1,0 +1,43 @@
+.info {
+  padding: 58px 0;
+  background-color: #eee;
+
+  line-height: 1.5em;
+
+  h4 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 19px;
+    display: block;
+    position: relative;
+    @media(min-width: $screen-sm-min) {
+      margin: 12px 4px 0 4px;
+    }
+  }
+
+  p {
+    text-align: center;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .about { 
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: center;
+    a {
+      font-weight: 200;
+      color: white;
+      padding: 0 6px;
+      text-decoration: none;
+      background-color: #9a9a9a;
+      border-radius: 2px;
+      display: inline-block;
+      &:hover {
+        background-color: darken(#9a9a9a, 10);
+      }
+    }
+  }
+
+}

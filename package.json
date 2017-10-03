@@ -21,9 +21,16 @@
     "animate.scss": "0.0.6",
     "bootstrap-sass": "^3.3.7",
     "express": "^4.14.0",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.2",
     "normalize-sass": "^1.0.0",
     "pug": "^2.0.0-beta6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0"
   }
 }

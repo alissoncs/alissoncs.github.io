@@ -3,9 +3,9 @@ html
   head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    link(href="https://fonts.googleapis.com/css?family=Oswald:300,400|Source+Sans+Pro:400,700",rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700", rel="stylesheet")
     link(href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css", rel="stylesheet")
-    link(href="/css/main.css", rel="stylesheet")
+    link(href="css/main.css", rel="stylesheet")
     link(rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png")
     link(rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png")
     link(rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png")
@@ -24,35 +24,29 @@ html
     meta(name="msapplication-TileImage" content="/ms-icon-144x144.png")
     meta(name="theme-color" content="#ffffff")
     title.
-      Alisson Carvalho - Software Developer
+      Alisson Carvalho - Full-stack Developer
   body
     .main
       header.header
         .container
-          .grid-5
-            hgroup.logo
+          hgroup.logo
+            h1
               figure
-                img(src="/img/profile.jpg", alt="Alisson Carvalho - Profile picture")
-              h2 Alisson Carvalho
-              h5 Software Developer
-          .grid-7
-        .container
-          hr
+                img(src="img/profile.png", alt="Alisson Carvalho - Profile picture")
+            h2 Alisson C. da Silva
+            p.oer Full-stack Developer
+      .container
+        hr
       main.info
         section.about.container
-          .col-sm-2
-            h4 About me
-          .col-sm-10
-            p.
-              Hi! I am Alisson, 21 years old.
-              I just started a blog called #[strong Rock Mania] after that, I joined in the biggest brazilian heavy metal blog called #[strong Heavy Metal Center] - both is over nowadays.
-              It was my first contact with writing posts and coding (based on XHTML and CSS).
-            p.
-              Today I'm a full-stack developer, with 6 years of experience in this area.
-              I already work with PHP (using pure code and some frameworks like Symfony, Phalcon and Laravel), Java (Android SDK) and today I'm focused on Front-end, Node.js and the full Javascript ecosystem. #[a(href="/more") Read more]!
+          p.
+            Hi! I am Alisson, 21 years old.
+            I just started a blog called #[strong Rock Mania] after that, I joined in the biggest brazilian heavy metal blog called #[strong Heavy Metal Center] - both is over nowadays.
+            It was my first contact with writing posts and coding (based on XHTML and CSS).
+          p.
+            Today I'm a full-stack developer, with 6 years of experience in this area.
+            I already work with PHP (using pure code and some frameworks like Symfony, Phalcon and Laravel), Java (Android SDK) and today I'm focused in Front-end (React.js and Angular 2), Node.js and the full Javascript ecosystem. #[a(href="/more") Read more]
       footer.footer
-        .container
-          hr
         .container
           .social-icons
             ul
